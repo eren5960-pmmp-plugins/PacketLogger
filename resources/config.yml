@@ -1,0 +1,9 @@
+# if true, sending received packets names. else if false, not send
+send-packet-info: true
+
+# Does not send received packet information
+# For more packets: https://github.com/pmmp/PocketMine-MP/tree/master/src/pocketmine/network/mcpe/protocol
+no-send-info-packets:
+  - MovePlayerPacket
+  - MoveEntityAbsolutePacket
+  - InteractPacket
