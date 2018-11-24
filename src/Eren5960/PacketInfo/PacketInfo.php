@@ -34,7 +34,7 @@ class PacketInfo extends PluginBase implements Listener{
     public function onEnable(): void{
         $this->not = $this->getConfig()->get("no-send-info-packets", []);
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
-        $this->getScheduler()->scheduleRepeatingTask(new class($this) extends Task{private $plugin;public function __construct(PacketInfo $plugin){$this->plugin = $plugin;}public function onRun(int $currentTick){$this->plugin->sendReceivedPacketCount();$this->count=0;}}, 1200);
+        $this->getScheduler()->scheduleRepeatingTask(new class($this) extends Task{private $plugin;public function __construct(PacketInfo $plugin){$this->plugin = $plugin;}public function onRun(int $currentTick){$this->plugin->sendReceivedPacketCount();}}, 1200);
     }
 
     public function onReceivePacket(DataPacketReceiveEvent $event){
@@ -63,5 +63,6 @@ class PacketInfo extends PluginBase implements Listener{
 
     public function sendReceivedPacketCount(): void{
         echo Terminal::$COLOR_AQUA . "Received packet count in 1 minute: " . Terminal::$COLOR_GOLD . $this->count . "\n";
+        $this->count = 0;
     }
 }
