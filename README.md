@@ -8,7 +8,7 @@ PocketMine-MP plugin to sending info received packets.
 ```
 PacketInfo - a PocketMine-MP plugin to sending received packets
 
-Copyright (C) 2017-2018 Eren5960
+Copyright (C) 2017-2018 Eren A. Akyol
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
