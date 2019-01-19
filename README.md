@@ -1,4 +1,4 @@
-# PacketInfo
+# PacketLogger
 PocketMine-MP plugin to sending info received packets.
 
 ##### NOTE
